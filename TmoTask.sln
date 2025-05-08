@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TmoTask", "TmoTask\TmoTask.csproj", "{D263AF44-4C04-4C4F-A28F-AE35F90C65CA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D263AF44-4C04-4C4F-A28F-AE35F90C65CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D263AF44-4C04-4C4F-A28F-AE35F90C65CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D263AF44-4C04-4C4F-A28F-AE35F90C65CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D263AF44-4C04-4C4F-A28F-AE35F90C65CA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5CFCF9E4-C446-49AA-A4E0-6E05BC27FB49}
+	EndGlobalSection
+EndGlobal
