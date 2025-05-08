@@ -11,7 +11,8 @@ namespace TmoTask.DataAccess
     public class DataHandler : IDataHandler
     {
         private readonly string _dataSourcePath;
-        public DataHandler(IConfiguration config)
+        private ILogger _logger;
+        public DataHandler(IConfiguration config, ILogger logger)
         {
             string? dataSourcePath = config["DataSourcePath"];
             if (dataSourcePath == null)
@@ -19,6 +20,7 @@ namespace TmoTask.DataAccess
                 throw new ArgumentNullException(nameof(dataSourcePath));
             }
             _dataSourcePath = dataSourcePath;
+            _logger = logger;
         }
 
         private CsvReader GetCsvReader()

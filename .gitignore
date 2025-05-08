@@ -8,33 +8,33 @@
 ## Get latest from https://github.com/github/gitignore/blob/main/Dotnet.gitignore
 
 # Build results
-[Dd]ebug/
-[Dd]ebugPublic/
-[Rr]elease/
-[Rr]eleases/
-x64/
-x86/
-[Ww][Ii][Nn]32/
-[Aa][Rr][Mm]/
-[Aa][Rr][Mm]64/
-bld/
-[Bb]in/
-[Oo]bj/
-[Ll]og/
-[Ll]ogs/
+/TmoTask/[Dd]ebug/
+/TmoTask/[Dd]ebugPublic/
+/TmoTask/[Rr]elease/
+/TmoTask/[Rr]eleases/
+/TmoTask/x64/
+/TmoTask/x86/
+/TmoTask/[Ww][Ii][Nn]32/
+/TmoTask/[Aa][Rr][Mm]/
+/TmoTask/[Aa][Rr][Mm]64/
+/TmoTask/bld/
+/TmoTask/[Bb]in/
+/TmoTask/[Oo]bj/
+/TmoTask/[Ll]og/
+/TmoTask/[Ll]ogs/
 
 # .NET Core
-project.lock.json
-project.fragment.lock.json
-artifacts/
-
-# ASP.NET Scaffolding
-ScaffoldingReadMe.txt
-
-# NuGet Packages
-*.nupkg
-# NuGet Symbol Packages
-*.snupkg
+/TmoTask/project.lock.json
+/TmoTask/project.fragment.lock.json
+/TmoTask/artifacts/
+/TmoTask/
+/TmoTask/# ASP.NET Scaffolding
+/TmoTask/ScaffoldingReadMe.txt
+/TmoTask/
+/TmoTask/# NuGet Packages
+/TmoTask/*.nupkg
+/TmoTask/# NuGet Symbol Packages
+/TmoTask/*.snupkg
 
 # Others
 ~$*
@@ -45,11 +45,20 @@ CodeCoverage/
 *.binlog
 
 # MSTest test Results
-[Tt]est[Rr]esult*/
-[Bb]uild[Ll]og.*
+/TmoTask/[Tt]est[Rr]esult*/
+/TmoTask/[Bb]uild[Ll]og.*
 
 # NUnit
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
 /TmoTask/appsettings.json
+/TmoTask/appsettings.Development.json
+/TmoTask/Logs/
+/TmoTask/secrets.json
+
+/tmo-react/node_modules/
+/tmo-react/.env
+/tmo-react/build/
+/tmo-react/dist/
+/.vs
