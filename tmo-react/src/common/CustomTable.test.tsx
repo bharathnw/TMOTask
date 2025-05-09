@@ -1,5 +1,4 @@
 import { render, screen } from '@testing-library/react';
-import { act } from 'react';
 import CustomTable from './CustomTable';
 import { TableColumn } from '../types/TableColumn';
 
@@ -19,7 +18,7 @@ const data: Data[] = [
 ];
 
 jest.mock('@chakra-ui/react', () => ({
-    Table: ({ children }: any) => <table>{children}</table>,
+    Table: ({ children }: any) => <table data-testid="custom-table">{children}</table>,
     Thead: ({ children }: any) => <thead>{children}</thead>,
     Tbody: ({ children }: any) => <tbody>{children}</tbody>,
     Tr: ({ children }: any) => <tr>{children}</tr>,

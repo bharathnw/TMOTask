@@ -18,7 +18,7 @@ jest.mock('@chakra-ui/react', () => ({
 }));
 
 jest.mock('../common/CustomTable', () => (props: any) => (
-    <table>
+    <table data-testid="custom-table">
         <thead>
             <tr>
                 {props.columns.map((col: any) => (
@@ -38,7 +38,7 @@ jest.mock('../common/CustomTable', () => (props: any) => (
     </table>
 ));
 jest.mock('../common/LineChart', () => () => (
-    <div>LineChart Mock</div>
+    <div data-testid="line-chart">LineChart</div>
 ));
 jest.mock('../common/Dropdown', () => ({ onSelect, options, placeHolder, selectedValue }: any) => (
     <div>
