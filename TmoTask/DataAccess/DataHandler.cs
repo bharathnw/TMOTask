@@ -11,16 +11,15 @@ namespace TmoTask.DataAccess
     public class DataHandler : IDataHandler
     {
         private readonly string _dataSourcePath;
-        private ILogger _logger;
-        public DataHandler(IConfiguration config, ILogger logger)
+        public DataHandler(IConfiguration config)
         {
             string? dataSourcePath = config["DataSourcePath"];
             if (dataSourcePath == null)
             {
-                throw new ArgumentNullException(nameof(dataSourcePath));
+                throw new ArgumentNullException("DataSourcePath is empty");
             }
             _dataSourcePath = dataSourcePath;
-            _logger = logger;
+
         }
 
         private CsvReader GetCsvReader()
@@ -29,9 +28,19 @@ namespace TmoTask.DataAccess
             {
                 HasHeaderRecord = true
             };
-
-            StreamReader reader = new StreamReader(_dataSourcePath);
-            return new CsvReader(reader, config);
+            try
+            {
+                StreamReader reader = new StreamReader(_dataSourcePath);
+                return new CsvReader(reader, config);
+            }
+            catch (FileNotFoundException ex)
+            {
+                throw new InvalidOperationException($"Could not find the file at the path", ex);
+            }
+            catch (Exception ex)
+            {
+                throw new InvalidOperationException($"An error occurred while accessing the file", ex);
+            }
         }
 
         public async Task<List<string>> GetBranchesAsync()

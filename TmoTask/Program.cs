@@ -6,7 +6,6 @@ using TmoTask.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -19,12 +18,14 @@ if (string.IsNullOrEmpty(logPath))
     throw new Exception("No Log file path found");
 }
 
+// Add services to the container.
 builder.Services.AddSingleton<ILogger>(new FileLogger(logPath));
 builder.Services.AddScoped<IDataHandler, DataHandler>();
 builder.Services.AddScoped<IBranchService, BranchService>();
 builder.Services.AddScoped<ISellerService, SellerService>();
-var app = builder.Build();
 
+
+var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -35,7 +36,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseMiddleware<ExceptionMiddleware>();
 
-app.UseCors(x => x.AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod());
+app.UseCors(x => x.WithOrigins("https://localhost:3000", "http://localhost:3000").AllowAnyHeader().AllowAnyMethod());
 
 app.UseHttpsRedirection();
 

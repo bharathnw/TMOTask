@@ -28,14 +28,7 @@
 /TmoTask/project-lock.json
 /TmoTask/project.fragment.lock.json
 /TmoTask/artifacts/
-/TmoTask/
-/TmoTask/# ASP.NET Scaffolding
-/TmoTask/ScaffoldingReadMe.txt
-/TmoTask/
-/TmoTask/# NuGet Packages
-/TmoTask/*.nupkg
-/# NuGet Symbol Packages
-/*.snupkg
+
 
 # Others
 ~$*
