@@ -15,6 +15,14 @@ namespace TmoTask.Controllers
             _sellerService = sellerService;
         }
         [HttpGet]
+        public async Task<IActionResult> GetAsync()
+        {
+            var sellerReport = await _sellerService.GetTopSellersByMonthAsync();
+            return Ok(sellerReport);
+        }
+
+        [HttpGet]
+        [Route("{branch}")]
         public async Task<IActionResult> GetAsync(string? branch)
         {
             var sellerReport = await _sellerService.GetTopSellersByMonthAsync(branch);

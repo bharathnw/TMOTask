@@ -25,6 +25,7 @@
 
 # .NET Core
 /TmoTask/project.lock.json
+/TmoTask/project-lock.json
 /TmoTask/project.fragment.lock.json
 /TmoTask/artifacts/
 /TmoTask/
@@ -33,8 +34,8 @@
 /TmoTask/
 /TmoTask/# NuGet Packages
 /TmoTask/*.nupkg
-/TmoTask/# NuGet Symbol Packages
-/TmoTask/*.snupkg
+/# NuGet Symbol Packages
+/*.snupkg
 
 # Others
 ~$*
@@ -52,6 +53,14 @@ CodeCoverage/
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
+
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+*.cache
+*.log
 /TmoTask/appsettings.json
 /TmoTask/appsettings.Development.json
 /TmoTask/Logs/
@@ -62,3 +71,4 @@ nunit-*.xml
 /tmo-react/build/
 /tmo-react/dist/
 /.vs
+tmo-react/package-lock.json
